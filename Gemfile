@@ -43,6 +43,8 @@ group :development, :test do
   gem 'pry'
   gem 'launchy'
   gem 'capybara'
+  gem 'devise'
+  gem 'rails_admin'
 end
 
 group :development do
