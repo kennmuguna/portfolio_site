@@ -1,2 +1,27 @@
-<h1>Skills#index</h1>
-<p>Find me in app/views/skills/index.html.erb</p>
+<br>
+
+<hr>
+
+<center><h1>Kenn Muguna</h1></center>
+
+<hr>
+
+<div class="container">
+
+<div class="profile">
+<img src="">
+</div>
+
+
+<h3>My Skills:</h3>
+
+<ul>
+    <% @skills.each do |skill| %>
+      <li><%= skill.language %></li>
+    <% end %>
+</ul>
+
+<%= link_to "New", new_skill_path%>
+
+</end>
+
