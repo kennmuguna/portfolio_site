@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
-    has_many :skills
+    belongs_to :skill
     validates :name, :presence => true
     validates :description, :presence => true
 end

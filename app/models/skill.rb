@@ -1,4 +1,4 @@
 class Skill < ApplicationRecord
-    belongs_to :project
+    has_many :projects
     validates :language, :presence => true
 end
