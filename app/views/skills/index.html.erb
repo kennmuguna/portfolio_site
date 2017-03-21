@@ -13,15 +13,20 @@
 </div>
 
 
+<div class="col-md-4">
 <h3>My Skills:</h3>
 
 <ul>
     <% @skills.each do |skill| %>
-      <li><%= skill.language %></li>
+      <li><%= link_to skill.language, skill_path(skill) %></li>
     <% end %>
+
 </ul>
 
 <%= link_to "New", new_skill_path%>
+</end>
+
+
 
 
 
