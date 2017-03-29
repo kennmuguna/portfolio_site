@@ -27,7 +27,7 @@ class SkillsController < ApplicationController
   def destroy
     @skill = Skill.find(params[:id])
     @skill.destroy
-    redirect_to skills_path
+      redirect_to skills_path
   end
 
   private 

@@ -1,14 +1,39 @@
 
-<h1><%= @skill.language %></h1>
+
+<center><h1><%= @skill.language %></h1></center>
 
 
 
-<%= link_to "Delete Skill", skill_path(@skill), :data => { :confirm => "Are you sure?", :method => "delete"}  %>
+<%= link_to "Delete Skill", skill_path(@skill), :data => { :confirm => "Are you sure?", :method => "delete"}  %> <br>
 
-<%= link_to "Edit Skill", edit_skill_path(@skill) %>
+<%= link_to "Edit Skill", edit_skill_path(@skill) %> <br>
 
-<%= link_to "Add New Project", new_skill_project_path(@skill) %>
+<%= link_to "Add New Project", new_skill_project_path(@skill) %> <br>
 
+<br>
+
+<% if @skill.projects.any? %>
+
+<h3>Here are the projects that have been added so far:</h3> <br>
+
+
+
+<% @skill.projects.each do |project| %>
+<ul>
+    <li>
+            <strong><%= project.name %></strong> <br> <br>
+            <%= project.description %>
+    </li>
+
+</ul>
+
+<% end %>
+
+<% else %>
+
+<h3>No projects have been added yet</h3>
+
+<% end %>
 
 
 
