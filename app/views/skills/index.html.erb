@@ -4,6 +4,7 @@
 <center><h1>Hi, I'm Kenn</h1></center>
 <center><h4>A Budding Software Developer</h4></center>
 <hr>
+
 </div>
 
 <h4><center>"What separates design from art is that design is meant to be functional"</center></h4>
@@ -12,22 +13,21 @@
 
 <div class="skills">
 <hr>
-<h3><center>My Skills:<center></h3>
+<h3><center>Skills<center></h3>
 <hr>
 
 
 <ul>
-<div class="col-md-6">
     <% @skills.each do |skill| %>
-      <li><%= link_to skill.language, skill_path(skill) %></li>
+    <div class="col-md-4", id="skill">
+      <center><%= link_to skill.language, skill_path(skill) %></center><br>
+    </div>
     <% end %>
-</div>
-
 </ul>
 
-</end>
+</end> 
 
-<%= link_to "New", new_skill_path%>
+<br> <%= link_to "New", new_skill_path%>
 </end>
 </end>
 
